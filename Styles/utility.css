@@ -1,0 +1,165 @@
+/* Title */
+.title-lg {
+  font-size: 3rem;
+  line-height: auto;
+  font-weight: bold;
+  letter-spacing: 0%;
+}
+
+.title-md {
+  font-size: 2.5rem;
+  line-height: auto;
+  font-weight: bold;
+  letter-spacing: 0%;
+}
+
+.title-sm {
+  font-size: 2rem;
+  line-height: auto;
+  font-weight: bold;
+  letter-spacing: 0%;
+}
+
+.title-xs {
+  font-size: 1rem;
+  line-height: auto;
+  font-weight: bold;
+  letter-spacing: 0%;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 2rem;
+  line-height: 200%;
+  font-weight: medium;
+  letter-spacing: 0%;
+}
+
+/* Body */
+.body-lg {
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: normal;
+  letter-spacing: 0%;
+}
+
+.body-md {
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: normal;
+  letter-spacing: 0%;
+}
+
+.body-sm {
+  font-size: 0.875rem;
+  line-height: 140%;
+  font-weight: normal;
+  letter-spacing: 0%;
+}
+
+.body-xs {
+  font-size: 0.75rem;
+  line-height: 140%;
+  font-weight: normal;
+  letter-spacing: 0%;
+}
+
+/* Componentes */
+.button-text {
+  font-size: 0.875rem;
+  line-height: auto;
+  font-weight: bold;
+  letter-spacing: 0%;
+}
+
+.link-text {
+  font-size: 0.875rem;
+  line-height: auto;
+  font-weight: medium;
+  letter-spacing: 0%;
+}
+
+.tag-text {
+  font-size: 0.625rem;
+  line-height: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+/* classes utilitarias */
+.margin-inline {
+  margin-inline: 10rem;
+}
+
+.button {
+  padding: .8rem 1.5rem;
+  color: var(--text-title);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 400ms ease;
+}
+
+.button-primary {
+  background-color: var(--pink-dark);
+
+  &:hover {
+    background-color: var(--pink-base);
+  }
+}
+
+.button-secondary {
+  background-color: var(--blue-dark);
+
+  &:hover {
+    background-color: var(--blue-mid);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--blue-light);
+
+  &:hover {
+    color: var(--text-body);
+  }
+}
+
+.social-link {
+  filter: invert(65%) sepia(50%) saturate(1801%) hue-rotate(180deg) brightness(97%) contrast(92%);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: .5rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: filter 400ms ease;
+
+  &:hover {
+    filter: none;
+    &::before {
+      scale: 1;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    padding: inherit;
+
+    background-color: var(--shape-stroke);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    scale: 0;
+    transition: scale 400ms ease;
+  }
+}
