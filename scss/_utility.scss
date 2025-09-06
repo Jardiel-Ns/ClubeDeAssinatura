@@ -1,6 +1,6 @@
 /* Title */
 .title-lg {
-  font-size: 3rem;
+  font-size: 1.75rem;
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0%;
@@ -29,15 +29,15 @@
 
 /* Subtitle */
 .subtitle {
-  font-size: 2rem;
-  line-height: 200%;
+  font-size: 1rem;
+  line-height: 140%;
   font-weight: medium;
   letter-spacing: 0%;
 }
 
 /* Body */
 .body-lg {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   line-height: 140%;
   font-weight: normal;
   letter-spacing: 0%;
@@ -89,7 +89,7 @@
 
 /* classes utilitarias */
 .margin-inline {
-  margin-inline: 10rem;
+  margin-inline: 1.25rem;
 }
 
 .button {
@@ -161,5 +161,30 @@
     
     scale: 0;
     transition: scale 400ms ease;
+  }
+}
+
+@media (min-width: 80em) {
+  section#hero-initial {
+    & section#hero {
+      .title-lg {
+        font-size: 3rem;
+      }
+
+      .body-lg {
+        font-size: 1.25rem;
+      }
+    }
+
+    & footer {
+      .subtitle {
+        font-size: 2rem;
+        line-height: 200%;
+      }
+    }
+  }
+
+  .margin-inline {
+    margin-inline: 10rem;
   }
 }

@@ -30,48 +30,18 @@
 
 html {
   font-family: var(--ff-base);
+  color: var(--text-body);
   overflow-x: hidden;
 }
 
 body {
-  background-color: var(--shap-background);
+  background-color: var(--shape-background);
 }
 
 a {
   text-decoration: none;
 }
 
-/*
-& > section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      gap: 0;
-
-      & > h1 {
-        color: var(--text-title);
-      }
-
-      & > p {
-        color: var(--text-body);
-      }
-    }
-
-    & > img {
-      z-index: -1;
-      position: absolute;
-      top: -150px;
-      width: 130%;
-    }
-  }
-
-*/
 /* Title */
 .title-lg {
   font-size: 1.75rem;
@@ -103,8 +73,8 @@ a {
 
 /* Subtitle */
 .subtitle {
-  font-size: 2rem;
-  line-height: 200%;
+  font-size: 1rem;
+  line-height: 140%;
   font-weight: medium;
   letter-spacing: 0%;
 }
@@ -231,6 +201,16 @@ a {
 }
 
 @media (min-width: 80em) {
+  section#hero-initial section#hero .title-lg {
+    font-size: 3rem;
+  }
+  section#hero-initial section#hero .body-lg {
+    font-size: 1.25rem;
+  }
+  section#hero-initial footer .subtitle {
+    font-size: 2rem;
+    line-height: 200%;
+  }
   .margin-inline {
     margin-inline: 10rem;
   }
@@ -264,13 +244,53 @@ section#hero-initial > section > div > h1 {
   width: 80%;
   color: var(--text-title);
 }
-section#hero-initial > section > div > p {
-  color: var(--text-body);
-}
-section#hero-initial > section > div > img {
-  width: 80%;
+section#hero-initial > section > img {
   position: absolute;
   z-index: -1;
+  top: 0;
+  scale: 1/1;
+  height: 55vh;
+}
+section#hero-initial > section > span {
+  background-color: var(--pink-low);
+  position: absolute;
+  top: 10%;
+  z-index: -2;
+  height: 50rem;
+  width: 40rem;
+  border-radius: 50%;
+  filter: blur(100rem);
+  opacity: 0.5;
+}
+section#hero-initial > footer {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+section#hero-initial > footer > p {
+  margin-top: 22rem;
+  width: 90%;
+}
+section#hero-initial > footer > img {
+  width: 2.5rem;
+  scale: 1/1;
+  position: absolute;
+}
+section#hero-initial > footer > img[src*=ouija] {
+  bottom: -30px;
+  left: 20px;
+  transform: rotate(-20deg);
+}
+section#hero-initial > footer > img[src*=ball] {
+  bottom: -30px;
+  right: 30px;
+  transform: rotate(20deg);
+}
+section#hero-initial > footer > img[src*=spellbook] {
+  bottom: 100px;
+  right: 100px;
+  transform: rotate(20deg);
 }
 
 @media (min-width: 80em) {
@@ -285,12 +305,65 @@ section#hero-initial > section > div > img {
   }
   section#hero-initial section#hero > div {
     margin-top: 10rem;
+    gap: 2rem;
   }
-  section#hero-initial section#hero .title-lg {
-    font-size: 3rem;
+  section#hero-initial section#hero > img {
+    height: 100vh;
   }
-  section#hero-initial section#hero .body-lg {
-    font-size: 1.25rem;
+  section#hero-initial section#hero > span {
+    top: -2rem;
+    height: 70rem;
+    width: 120rem;
+    opacity: 0.4;
+  }
+  section#hero-initial footer p {
+    margin-top: 45%;
+    width: 100%;
+  }
+  section#hero-initial footer img {
+    width: 5.5rem;
+  }
+  section#hero-initial footer img[src*=ouija] {
+    bottom: -60px;
+    left: 60px;
+    transform: rotate(100deg);
+  }
+  section#hero-initial footer img[src*=ball] {
+    bottom: -60px;
+    right: 60px;
+    transform: rotate(-20deg);
+  }
+  section#hero-initial footer img[src*=spellbook] {
+    bottom: 200px;
+    right: 45%;
+    transform: rotate(20deg);
+  }
+}
+@media (min-width: 120em) {
+  section#hero-initial section#hero div h1 {
+    width: 55%;
+  }
+  section#hero-initial section#hero span {
+    opacity: 0.6;
+  }
+  section#hero-initial footer p {
+    margin-top: 52%;
+    width: 60%;
+  }
+  section#hero-initial footer img[src*=ouija] {
+    bottom: -45px;
+    left: 300px;
+    transform: rotate(100deg);
+  }
+  section#hero-initial footer img[src*=ball] {
+    bottom: -55px;
+    right: 300px;
+    transform: rotate(-20deg);
+  }
+  section#hero-initial footer img[src*=spellbook] {
+    bottom: 200px;
+    right: 45%;
+    transform: rotate(20deg);
   }
 }
 

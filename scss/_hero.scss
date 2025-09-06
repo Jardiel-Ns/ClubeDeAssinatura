@@ -1,0 +1,197 @@
+section#hero-initial {
+  & > nav {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img2 {
+      display: none;
+    }
+
+    & > a {
+      height: fit-content;
+    }
+  }
+
+  & > section {
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      position: relative;
+
+      & > h1 {
+        width: 80%;
+        color: var(--text-title);
+      }
+    }
+
+    & > img {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      scale: 1/1;
+      height: 55vh;
+    }
+
+    & > span {
+      background-color: var(--pink-low);
+      position: absolute;
+      top: 10%;
+      z-index: -2;
+      height: 50rem;
+      width: 40rem;
+      border-radius: 50%;
+      filter: blur(100rem);
+      opacity: 0.5;
+    }
+  }
+
+  & > footer {
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+
+    & > p {
+      margin-top: 22rem;
+      width: 90%;
+    }
+
+    & > img {
+      width: 2.5rem;
+      scale: 1/1;
+      position: absolute;
+    }
+
+    & > img[src*="ouija"] {
+      bottom: -30px;
+      left: 20px;
+      transform: rotate(-20deg);
+    }
+
+    & > img[src*="ball"] {
+      bottom: -30px;
+      right: 30px;
+      transform: rotate(20deg);
+    }
+
+    & > img[src*="spellbook"] {
+      bottom: 100px;
+      right: 100px;
+      transform: rotate(20deg);
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  section#hero-initial {
+    nav {
+      margin-top: 3.5rem;
+
+      .img1 {
+        display: none;
+      }
+
+      .img2 {
+        display: inline-block;
+      }
+    }
+
+    section#hero {
+      & > div {
+        margin-top: 10rem;
+        gap: 2rem;
+      }
+
+      & > img {
+        height: 100vh;
+      }
+
+      & > span {
+        top: -2rem;
+        height: 70rem;
+        width: 120rem;
+        opacity: 0.4;
+      }
+    }
+
+    footer {
+      p {
+        margin-top: 45%;
+        width: 100%;
+      }
+
+      img {
+        width: 5.5rem;
+      }
+
+      img[src*="ouija"] {
+        bottom: -60px;
+        left: 60px;
+        transform: rotate(100deg);
+      }
+
+      img[src*="ball"] {
+        bottom: -60px;
+        right: 60px;
+        transform: rotate(-20deg);
+      }
+
+      img[src*="spellbook"] {
+        bottom: 200px;
+        right: 45%;
+        transform: rotate(20deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 120em) {
+  section#hero-initial {
+    section#hero {
+      div {
+        h1 {
+          width: 55%;
+        }
+      }
+
+      span {
+        opacity: 0.6;
+      }
+    }
+
+    footer {
+      p {
+        margin-top: 52%;
+        width: 60%;
+      }
+
+      img[src*="ouija"] {
+        bottom: -45px;
+        left: 300px;
+        transform: rotate(100deg);
+      }
+
+      img[src*="ball"] {
+        bottom: -55px;
+        right: 300px;
+        transform: rotate(-20deg);
+      }
+
+      img[src*="spellbook"] {
+        bottom: 200px;
+        right: 45%;
+        transform: rotate(20deg);
+      }
+    }
+  }
+}
