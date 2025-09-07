@@ -1,0 +1,132 @@
+section#about {
+  div#about-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 12rem;
+    gap: .5rem;
+    border: solid pink;
+
+    div {
+      border: solid green;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      img {
+        width: 1.25rem;
+      }
+    }
+  }
+
+  div#about-ilustration {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 4rem;
+
+    img, span {
+      position: absolute;
+    }
+
+    img[src*="book.png"] {
+      width: 10rem;
+      right: 33%;
+      top: 18%;
+    }
+
+    img[src*="bookmark-yellow"] {
+      width: 4rem;
+      z-index: -1;
+      right: 22%;
+      top: 12%;
+      transform: rotate(12deg);
+    }
+
+    img[src*="bookmark-purple"] {
+      width: 4rem;
+      z-index: -2;
+      right: 12%;
+      top: 20%;
+      transform: rotate(23deg);
+    }
+
+    img[src*="broche"] {
+      width: 4rem;
+      z-index: -2;
+      left: 14%;
+      bottom: 7%;
+    }
+
+    span.ilustration-span1 {
+      top: 8%;
+      left: 2%;
+    }
+
+    img[src*="vector1"] {
+      width: 4rem;
+      z-index: 1;
+      left: 9%;
+      top: 15%;
+    }
+
+    span.ilustration-span2 {
+      top: 50%;
+      left: 3%;
+    }
+
+    img[src*="vector2"] {
+      width: 3rem;
+      z-index: 1;
+      left: 6%;
+      bottom: 25%;
+    }
+
+    span.ilustration-span3 {
+      bottom: 5%;
+      right: 12%;
+    }
+
+    img[src*="vector3"] {
+      width: 3rem;
+      z-index: 1;
+      right: 18%;
+      bottom: 12%;
+    }
+
+    .body-md {
+      font-size: 0.625rem;
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  section#about {
+    div#about-title {
+      margin-top: 20rem;
+
+      div {
+        gap: 1rem;
+
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  .title-sm {
+    font-size: 2rem;
+  }
+
+  .body-md {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 120em) {
+  
+}
