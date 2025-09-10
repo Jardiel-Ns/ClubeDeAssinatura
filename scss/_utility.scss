@@ -164,6 +164,13 @@
   }
 }
 
+.shadowpoint-purple {
+  background-color: var(--pink-low);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
+}
+
 @media (min-width: 80em) {
   section#hero-initial {
     & section#hero {

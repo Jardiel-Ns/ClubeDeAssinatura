@@ -7,10 +7,8 @@ section#about {
 
     margin-top: 12rem;
     gap: .5rem;
-    border: solid pink;
 
     div {
-      border: solid green;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -24,83 +22,236 @@ section#about {
   div#about-ilustration {
     width: 100%;
     height: 20rem;
-    position: relative;
-    overflow: hidden;
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
 
-    img, span {
-      position: absolute;
-    }
+    div.about-ilustration-container {
+      position: relative;
+      height: 20rem;
+      width: 24rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    img[src*="book.png"] {
-      width: 10rem;
-      right: 33%;
-      top: 18%;
-    }
+      img, span {
+        position: absolute;
+      }
 
-    img[src*="bookmark-yellow"] {
-      width: 4rem;
-      z-index: -1;
-      right: 22%;
-      top: 12%;
-      transform: rotate(12deg);
-    }
-
-    img[src*="bookmark-purple"] {
-      width: 4rem;
-      z-index: -2;
-      right: 12%;
-      top: 20%;
-      transform: rotate(23deg);
-    }
-
-    img[src*="broche"] {
-      width: 4rem;
-      z-index: -2;
-      left: 14%;
-      bottom: 7%;
-    }
-
-    span.ilustration-span1 {
-      top: 8%;
-      left: 2%;
-    }
-
-    img[src*="vector1"] {
-      width: 4rem;
-      z-index: 1;
-      left: 9%;
-      top: 15%;
-    }
-
-    span.ilustration-span2 {
-      top: 50%;
-      left: 3%;
-    }
-
-    img[src*="vector2"] {
-      width: 3rem;
-      z-index: 1;
-      left: 6%;
-      bottom: 25%;
-    }
-
-    span.ilustration-span3 {
-      bottom: 5%;
-      right: 12%;
-    }
-
-    img[src*="vector3"] {
-      width: 3rem;
-      z-index: 1;
-      right: 18%;
-      bottom: 12%;
+      span.shadowpoint-purple {
+        opacity: .5;
+        width: 30rem;
+        height: 35rem;
+        z-index: -4;
+      }
+  
+      img[src*="book.png"] {
+        width: 10rem;
+        right: 33%;
+        top: 18%;
+      }
+  
+      img.bookmark-yellow {
+        width: 4rem;
+        z-index: -1;
+        right: 22%;
+        top: 12%;
+        transform: rotate(12deg);
+      }
+  
+      img.bookmark-purple {
+        width: 4rem;
+        z-index: -2;
+        right: 12%;
+        top: 20%;
+        transform: rotate(23deg);
+      }
+  
+      img.broche {
+        width: 4rem;
+        z-index: -2;
+        left: 14%;
+        bottom: 7%;
+      }
+  
+      span.span1 {
+        top: 8%;
+        left: 2%;
+      }
+  
+      img.vector1 {
+        width: 4rem;
+        z-index: 1;
+        left: 9%;
+        top: 15%;
+      }
+  
+      span.span2 {
+        top: 50%;
+        left: 3%;
+      }
+  
+      img.vector2 {
+        width: 3rem;
+        z-index: 1;
+        left: 6%;
+        bottom: 25%;
+      }
+  
+      span.span3 {
+        bottom: 5%;
+        right: 12%;
+      }
+  
+      img.vector3 {
+        width: 3rem;
+        z-index: 1;
+        right: 18%;
+        bottom: 12%;
+      }
     }
 
     .body-md {
       font-size: 0.625rem;
     }
   }
+}
+
+@keyframes bookmark-yellow {
+  from {
+    transform: translate(-100%, 25%) rotate(0deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%) rotate(13deg);
+    opacity: 1;
+  }
+}
+
+@keyframes bookmark-purple {
+  from {
+    transform: translate(-100%, 15%) rotate(0deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%) rotate(25deg);
+    opacity: 1;
+  }
+}
+
+@keyframes broche {
+  from {
+    transform: translate(100%, -25%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes span1 {
+  from {
+    transform: translate(300%, 650%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes vector1 {
+  from {
+    transform: translate(150%, 250%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes span2 {
+  from {
+    transform: translate(300%, 650%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes vector2 {
+  from {
+    transform: translate(250%, 10%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes span3 {
+  from {
+    transform: translate(-100%, -650%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes vector3 {
+  from {
+    transform: translate(-150%, -50%) rotate(0deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0%, 0%) rotate(-10deg);
+    opacity: 1;
+  }
+}
+
+/*animações de entrada*/
+
+.bookmark-yellow.animated {
+  animation: bookmark-yellow 0.8s 0.4s ease both;
+}
+
+.bookmark-purple.animated {
+  animation: bookmark-purple 0.8s 0.4s ease both;
+}
+
+.broche.animated {
+  animation: broche 0.8s 0.4s ease both;
+}
+
+.span1.animated {
+  animation: span1 0.8s 0.4s ease both;
+}
+
+.vector1.animated {
+  animation: vector1 0.8s 0.4s ease both;
+}
+
+.span2.animated {
+  animation: span2 0.8s 0.4s ease both;
+}
+
+.vector2.animated {
+  animation: vector2 0.8s 0.4s ease both;
+}
+
+.span3.animated {
+  animation: span3 0.8s 0.4s ease both;
+}
+
+.vector3.animated {
+  animation: vector3 0.8s 0.4s ease both;
 }
 
 @media (min-width: 80em) {
@@ -116,6 +267,108 @@ section#about {
         }
       }
     }
+
+    div#about-ilustration {
+      height: 58rem;
+      margin-top: 5.5rem;
+
+      div.about-ilustration-container {
+        height: 58rem;
+        width: 60rem;
+        position: relative;
+        
+        img, span {
+          position: absolute;
+        }
+
+        span.shadowpoint-purple {
+          opacity: .4;
+          width: 70rem;
+          height: 70rem;
+          bottom: 0;
+          z-index: -4;
+       }
+  
+        img[src*="book.png"] {
+          z-index: 2;
+          width: 28rem;
+          right: 28%;
+          top: 18%;
+        }
+  
+        img.bookmark-yellow {
+          width: 10rem;
+          top: 15%;
+          right: 18%;
+          transform: translate(-100%, 25%) rotate(0deg); /* mesmo que "from" do keyframe */
+          opacity: 0.5; /* mesmo que "from" do keyframe */
+          z-index: -1; /* garantir que fique visível */
+        }
+  
+        img.bookmark-purple {
+          z-index: -2;
+          right: 10%;
+          top: 24%;
+          width: 10rem;
+          opacity: 0.5;
+          transform: translate(-100%, 15%) rotate(0deg)
+        }
+  
+        img.broche {
+          z-index: 1;
+          opacity: 0.5;
+          left: 11%;
+          bottom: 7%;
+          width: 14rem;
+          transform: translate(100%, -25%);
+        }
+  
+        span.span1 {
+          top: 12%;
+          left: 5%;
+          opacity: 0.5;
+          transform: translate(300%, 650%);
+        }
+  
+        img.vector1 {
+          width: 12rem;
+          left: 9%;
+          top: 15%;
+          opacity: 0.5;
+          transform: translate(150%, 250%);
+        }
+  
+        span.span2 {
+          left: 10%;
+          top: 58%;
+          opacity: 0.5;
+          transform: translate(300%, 650%);
+        }
+  
+        img.vector2 {
+          width: 6rem;
+          left: 8%;
+          bottom: 27%;
+          opacity: 0.5;
+          transform: translate(250%, 10%);
+        }
+  
+        span.span3 {
+          bottom: 13%;
+          right: 21%;
+          opacity: 0.5;
+          transform: translate(-100%, -650%);
+        }
+  
+        img.vector3 {
+          width: 7rem;
+          right: 16.5%;
+          bottom: 17%;
+          opacity: 0.5;
+          transform: translate(-150%, -50%) rotate(0deg);
+        }
+      }
+    }
   }
 
   .title-sm {
@@ -125,8 +378,4 @@ section#about {
   .body-md {
     font-size: 1rem;
   }
-}
-
-@media (min-width: 120em) {
-  
 }

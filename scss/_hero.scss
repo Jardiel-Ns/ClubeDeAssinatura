@@ -42,14 +42,10 @@ section#hero-initial {
     }
 
     & > span {
-      background-color: var(--pink-low);
-      position: absolute;
       top: 10%;
       z-index: -2;
       height: 50rem;
       width: 40rem;
-      border-radius: 50%;
-      filter: blur(100rem);
       opacity: 0.5;
     }
   }
@@ -165,7 +161,10 @@ section#hero-initial {
       }
 
       span {
-        opacity: 0.6;
+        top: 45%;
+        width: 100rem;
+        height: 75rem;
+        opacity: .3;
       }
     }
 
