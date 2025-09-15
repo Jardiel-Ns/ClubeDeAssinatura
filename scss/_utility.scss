@@ -171,6 +171,31 @@
   filter: blur(200px);
 }
 
+.card1, .card2 {
+  width: 17rem;
+  height: 25rem;
+
+  background-color: var(--shape-base);
+  border: 1px solid var(--shape-stroke);
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1.4rem;
+  padding-bottom: 1.75rem;
+}
+
+.card2 {
+  background-color: var(--shape-hover);
+  border: none;
+}
+
+.borda {
+  border: solid greenyellow;
+}
+
 @media (min-width: 80em) {
   section#hero-initial {
     & section#hero {
@@ -182,13 +207,11 @@
         font-size: 1.25rem;
       }
     }
+  }
 
-    & footer {
-      .subtitle {
-        font-size: 2rem;
-        line-height: 200%;
-      }
-    }
+  .subtitle {
+    font-size: 2rem;
+    line-height: 200%;
   }
 
   .margin-inline {

@@ -29,15 +29,22 @@
   --ff-base: "Raleway", sans-serif;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   font-family: var(--ff-base);
   color: var(--text-body);
-  overflow-x: hidden;
-  height: 250rem;
 }
 
 body {
   background-color: var(--shape-background);
+}
+
+li {
+  list-style: none;
 }
 
 a {
@@ -209,6 +216,29 @@ a {
   filter: blur(200px);
 }
 
+.card1, .card2 {
+  width: 17rem;
+  height: 25rem;
+  background-color: var(--shape-base);
+  border: 1px solid var(--shape-stroke);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1.4rem;
+  padding-bottom: 1.75rem;
+}
+
+.card2 {
+  background-color: var(--shape-hover);
+  border: none;
+}
+
+.borda {
+  border: solid greenyellow;
+}
+
 @media (min-width: 80em) {
   section#hero-initial section#hero .title-lg {
     font-size: 3rem;
@@ -216,7 +246,7 @@ a {
   section#hero-initial section#hero .body-lg {
     font-size: 1.25rem;
   }
-  section#hero-initial footer .subtitle {
+  .subtitle {
     font-size: 2rem;
     line-height: 200%;
   }
@@ -224,23 +254,41 @@ a {
     margin-inline: 10rem;
   }
 }
-section#hero-initial > nav {
+section#hero-initial {
+  width: 100vdh;
+  display: flex;
+  justify-content: center;
+}
+section#hero-initial img.background2 {
+  display: none;
+}
+section#hero-initial div.hero-initial-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#hero-initial div.hero-initial-container nav {
+  width: 100%;
   margin-top: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-section#hero-initial > nav .img2 {
+section#hero-initial div.hero-initial-container nav .img2 {
   display: none;
 }
-section#hero-initial > nav > a {
+section#hero-initial div.hero-initial-container nav > a {
   height: fit-content;
 }
-section#hero-initial > section {
+section#hero-initial div.hero-initial-container section {
   display: flex;
   justify-content: center;
+  position: relative;
 }
-section#hero-initial > section > div {
+section#hero-initial div.hero-initial-container section > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,129 +297,68 @@ section#hero-initial > section > div {
   margin-top: 3rem;
   position: relative;
 }
-section#hero-initial > section > div > h1 {
-  width: 80%;
+section#hero-initial div.hero-initial-container section > div > h1 {
+  max-width: 20rem;
   color: var(--text-title);
+  margin: 0;
 }
-section#hero-initial > section > img {
+section#hero-initial div.hero-initial-container section > div > p {
+  margin: 0;
+}
+section#hero-initial div.hero-initial-container section > img.background1 {
   position: absolute;
   z-index: -1;
-  top: 0;
-  scale: 1/1;
+  top: -40%;
   height: 55vh;
 }
-section#hero-initial > section > span {
+section#hero-initial div.hero-initial-container section > span {
+  position: absolute;
   top: 10%;
   z-index: -2;
   height: 50rem;
   width: 40rem;
   opacity: 0.5;
 }
-section#hero-initial > footer {
-  position: relative;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-section#hero-initial > footer > p {
-  margin-top: 22rem;
-  width: 90%;
-}
-section#hero-initial > footer > img {
-  width: 2.5rem;
-  scale: 1/1;
-  position: absolute;
-}
-section#hero-initial > footer > img[src*=ouija] {
-  bottom: -30px;
-  left: 20px;
-  transform: rotate(-20deg);
-}
-section#hero-initial > footer > img[src*=ball] {
-  bottom: -30px;
-  right: 30px;
-  transform: rotate(20deg);
-}
-section#hero-initial > footer > img[src*=spellbook] {
-  bottom: 100px;
-  right: 100px;
-  transform: rotate(20deg);
-}
 
 @media (min-width: 80em) {
-  section#hero-initial nav {
+  section#hero-initial {
+    height: 100vh;
+  }
+  section#hero-initial img.background2 {
+    display: initial;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100vh;
+  }
+  section#hero-initial div.hero-initial-container {
+    height: fit-content;
+    width: 60rem;
+  }
+  section#hero-initial div.hero-initial-container nav {
     margin-top: 3.5rem;
   }
-  section#hero-initial nav .img1 {
+  section#hero-initial div.hero-initial-container nav .img1 {
     display: none;
   }
-  section#hero-initial nav .img2 {
+  section#hero-initial div.hero-initial-container nav .img2 {
     display: inline-block;
   }
-  section#hero-initial section#hero > div {
+  section#hero-initial div.hero-initial-container section#hero > div {
     margin-top: 10rem;
     gap: 2rem;
   }
-  section#hero-initial section#hero > img {
-    height: 100vh;
+  section#hero-initial div.hero-initial-container section#hero > div h1 {
+    max-width: 40rem;
   }
-  section#hero-initial section#hero > span {
-    top: -2rem;
-    height: 70rem;
-    width: 120rem;
-    opacity: 0.4;
+  section#hero-initial div.hero-initial-container section#hero img.background1 {
+    display: none;
   }
-  section#hero-initial footer p {
-    margin-top: 45%;
-    width: 100%;
-  }
-  section#hero-initial footer img {
-    width: 5.5rem;
-  }
-  section#hero-initial footer img[src*=ouija] {
-    bottom: -60px;
-    left: 60px;
-    transform: rotate(100deg);
-  }
-  section#hero-initial footer img[src*=ball] {
-    bottom: -60px;
-    right: 60px;
-    transform: rotate(-20deg);
-  }
-  section#hero-initial footer img[src*=spellbook] {
-    bottom: 200px;
-    right: 45%;
-    transform: rotate(20deg);
-  }
-}
-@media (min-width: 120em) {
-  section#hero-initial section#hero div h1 {
-    width: 55%;
-  }
-  section#hero-initial section#hero span {
+  section#hero-initial div.hero-initial-container section#hero > span {
     top: 45%;
     width: 100rem;
     height: 75rem;
     opacity: 0.3;
-  }
-  section#hero-initial footer p {
-    margin-top: 52%;
-    width: 60%;
-  }
-  section#hero-initial footer img[src*=ouija] {
-    bottom: -45px;
-    left: 300px;
-    transform: rotate(100deg);
-  }
-  section#hero-initial footer img[src*=ball] {
-    bottom: -55px;
-    right: 300px;
-    transform: rotate(-20deg);
-  }
-  section#hero-initial footer img[src*=spellbook] {
-    bottom: 200px;
-    right: 45%;
-    transform: rotate(20deg);
   }
 }
 section#about div#about-title {
@@ -429,7 +416,7 @@ section#about div#about-ilustration div.about-ilustration-container img.bookmark
 section#about div#about-ilustration div.about-ilustration-container img.bookmark-purple {
   width: 4rem;
   z-index: -2;
-  right: 12%;
+  right: 15%;
   top: 20%;
   transform: rotate(23deg);
 }
@@ -704,6 +691,137 @@ section#about div#about-ilustration .body-md {
   .body-md {
     font-size: 1rem;
   }
+}
+section#description footer {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  margin-top: 25rem;
+}
+section#description footer div.hero-footer-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  max-width: 25rem;
+}
+section#description footer div.hero-footer-container > p {
+  margin: 0;
+  width: 80%;
+}
+section#description footer div.hero-footer-container > img {
+  width: 2.5rem;
+  scale: 1/1;
+  position: absolute;
+}
+section#description footer div.hero-footer-container > img[src*=ouija] {
+  bottom: -30px;
+  left: 20px;
+  transform: rotate(-20deg);
+}
+section#description footer div.hero-footer-container > img[src*=ball] {
+  bottom: -30px;
+  right: 30px;
+  transform: rotate(20deg);
+}
+section#description footer div.hero-footer-container > img[src*=spellbook] {
+  bottom: 100px;
+  right: 100px;
+  transform: rotate(20deg);
+}
+
+@media (min-width: 80em) {
+  section#description {
+    width: 60rem;
+    margin-top: 15rem;
+  }
+  section#description footer {
+    margin-top: 0;
+  }
+  section#description footer div.hero-footer-container {
+    position: relative;
+    max-width: fit-content;
+  }
+  section#description footer div.hero-footer-container p {
+    width: 100%;
+  }
+  section#description footer div.hero-footer-container img {
+    width: 4.5rem;
+    position: absolute;
+  }
+  section#description footer div.hero-footer-container img[src*=ouija] {
+    bottom: -60px;
+    left: 60px;
+    transform: rotate(100deg);
+  }
+  section#description footer div.hero-footer-container img[src*=ball] {
+    bottom: -60px;
+    right: 60px;
+    transform: rotate(-20deg);
+  }
+  section#description footer div.hero-footer-container img[src*=spellbook] {
+    bottom: 200px;
+    right: 45%;
+    transform: rotate(20deg);
+  }
+}
+section#pricing {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+section#pricing .pricing-title {
+  text-align: center;
+}
+section#pricing .pricing-cards {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  padding-left: 3.25rem;
+}
+section#pricing .pricing-cards .pricing-card header p {
+  color: var(--blue-light);
+}
+section#pricing .pricing-cards .pricing-card header div {
+  display: flex;
+  align-items: self-end;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+section#pricing .pricing-cards .pricing-card header div p {
+  color: var(--text-title);
+  display: inline;
+  white-space: nowrap;
+}
+section#pricing .pricing-cards .pricing-card header :nth-child(3) {
+  color: var(--text-label);
+}
+section#pricing .pricing-cards .pricing-card section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+section#pricing .pricing-cards .pricing-card section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+section#pricing .pricing-cards .pricing-card section ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+section#pricing .pricing-cards .pricing-card section ul li img {
+  width: 0.875rem;
 }
 
 /*# sourceMappingURL=index.css.map */

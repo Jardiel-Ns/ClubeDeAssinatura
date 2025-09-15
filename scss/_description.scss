@@ -1,0 +1,88 @@
+section#description {
+  footer {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 25rem;
+
+    div.hero-footer-container {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      max-width: 25rem;
+
+      & > p {
+        margin: 0;
+        width: 80%;
+      }
+  
+      & > img {
+        width: 2.5rem;
+        scale: 1/1;
+        position: absolute;
+      }
+  
+      & > img[src*="ouija"] {
+        bottom: -30px;
+        left: 20px;
+        transform: rotate(-20deg);
+      }
+  
+      & > img[src*="ball"] {
+        bottom: -30px;
+        right: 30px;
+        transform: rotate(20deg);
+      }
+  
+      & > img[src*="spellbook"] {
+        bottom: 100px;
+        right: 100px;
+        transform: rotate(20deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  section#description {
+    width: 60rem;
+    margin-top: 15rem;
+
+    footer {
+      margin-top: 0;
+
+      div.hero-footer-container {
+        position: relative;
+        max-width: fit-content;
+
+        p {
+          width: 100%;
+        }
+  
+        img {
+          width: 4.5rem;
+          position: absolute;
+        }
+  
+        img[src*="ouija"] {
+          bottom: -60px;
+          left: 60px;
+          transform: rotate(100deg);
+        }
+  
+        img[src*="ball"] {
+          bottom: -60px;
+          right: 60px;
+          transform: rotate(-20deg);
+        }
+  
+        img[src*="spellbook"] {
+          bottom: 200px;
+          right: 45%;
+          transform: rotate(20deg);
+        }
+      }
+    }
+  }
+}
