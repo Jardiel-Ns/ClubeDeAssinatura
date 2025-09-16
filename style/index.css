@@ -55,24 +55,24 @@ a {
 }
 
 /* Barra de rolagem horizontal/vertical */
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 5px; /* largura (vertical) */
   height: 8px; /* altura (horizontal) */
 }
 
 /* Trilha (fundo da barra) */
-html::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent; /* deixa clean */
 }
 
 /* Polegar (parte que desliza) */
-html::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #7D298A; /* sua cor roxa */
   border-radius: 1px; /* bordas arredondadas */
 }
 
 /* Efeito no hover */
-html::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background-color: #9a3ca8; /* um roxo mais claro no hover */
 }
 
@@ -241,6 +241,13 @@ html::-webkit-scrollbar-thumb:hover {
   filter: blur(200px);
 }
 
+.shadowpoint-blue {
+  background-color: var(--blue-dark);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
+}
+
 .card1, .card2 {
   width: 17rem;
   height: 25rem;
@@ -291,6 +298,9 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .desktop-only {
     display: initial;
+  }
+  .mb-only {
+    display: none;
   }
 }
 section#hero-initial {
@@ -445,51 +455,51 @@ section#about div#about-ilustration div.about-ilustration-container img[src*="bo
   right: 33%;
   top: 18%;
 }
-section#about div#about-ilustration div.about-ilustration-container img.bookmark-yellow {
+section#about div#about-ilustration div.about-ilustration-container img.bymb {
   width: 4rem;
   z-index: -1;
   right: 22%;
   top: 12%;
   transform: rotate(12deg);
 }
-section#about div#about-ilustration div.about-ilustration-container img.bookmark-purple {
+section#about div#about-ilustration div.about-ilustration-container img.bpmb {
   width: 4rem;
   z-index: -2;
   right: 15%;
   top: 20%;
   transform: rotate(23deg);
 }
-section#about div#about-ilustration div.about-ilustration-container img.broche {
+section#about div#about-ilustration div.about-ilustration-container img.bmb {
   width: 4rem;
   z-index: -2;
   left: 14%;
   bottom: 7%;
 }
-section#about div#about-ilustration div.about-ilustration-container span.span1 {
+section#about div#about-ilustration div.about-ilustration-container span.smb1 {
   top: 8%;
   left: 2%;
 }
-section#about div#about-ilustration div.about-ilustration-container img.vector1 {
+section#about div#about-ilustration div.about-ilustration-container img.vecmb1 {
   width: 4rem;
   z-index: 1;
   left: 9%;
   top: 15%;
 }
-section#about div#about-ilustration div.about-ilustration-container span.span2 {
+section#about div#about-ilustration div.about-ilustration-container span.smb2 {
   top: 50%;
   left: 3%;
 }
-section#about div#about-ilustration div.about-ilustration-container img.vector2 {
+section#about div#about-ilustration div.about-ilustration-container img.vecmb2 {
   width: 3rem;
   z-index: 1;
   left: 6%;
   bottom: 25%;
 }
-section#about div#about-ilustration div.about-ilustration-container span.span3 {
+section#about div#about-ilustration div.about-ilustration-container span.smb3 {
   bottom: 5%;
   right: 12%;
 }
-section#about div#about-ilustration div.about-ilustration-container img.vector3 {
+section#about div#about-ilustration div.about-ilustration-container img.vecmb3 {
   width: 3rem;
   z-index: 1;
   right: 18%;
@@ -873,6 +883,7 @@ section#pricing .pricing-cards > :nth-child(2) header > :nth-child(1) {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin: 0;
 }
 section#pricing .pricing-cards > :nth-child(2) header > :nth-child(1) p {
   color: var(--pink-light);
@@ -882,12 +893,14 @@ section#pricing .pricing-cards > :nth-child(2) header > :nth-child(1) span {
   border-block: solid 0.5rem var(--shape-stroke);
   border-radius: 2rem;
   background-color: var(--shape-stroke);
+  position: absolute;
+  right: -2%;
 }
 
 @media (min-width: 58em) {
   section#pricing {
     margin-top: 10rem;
-    gap: 3.5rem;
+    gap: 4.5rem;
     overflow: initial;
   }
   section#pricing .pricing-cards {
@@ -956,6 +969,14 @@ section#pricing .pricing-cards > :nth-child(2) header > :nth-child(1) span {
   section#pricing .pricing-cards > :nth-child(3):hover {
     transform: rotate(8deg) translate(-10px, 35px);
     z-index: 3;
+  }
+  section#pricing .pricing-cards span.shadowpoint-blue {
+    z-index: -1;
+    width: 30rem;
+    height: 30rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
   }
 }
 

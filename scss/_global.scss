@@ -58,23 +58,23 @@ a {
 }
 
 /* Barra de rolagem horizontal/vertical */
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 5px;   /* largura (vertical) */
   height: 8px;  /* altura (horizontal) */
 }
 
 /* Trilha (fundo da barra) */
-html::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent; /* deixa clean */
 }
 
 /* Polegar (parte que desliza) */
-html::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #7D298A; /* sua cor roxa */
   border-radius: 1px;        /* bordas arredondadas */
 }
 
 /* Efeito no hover */
-html::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background-color: #9a3ca8; /* um roxo mais claro no hover */
 }

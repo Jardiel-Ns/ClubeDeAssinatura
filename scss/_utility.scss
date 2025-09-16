@@ -171,6 +171,13 @@
   filter: blur(200px);
 }
 
+.shadowpoint-blue {
+  background-color: var(--blue-dark);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
+}
+
 .card1, .card2 {
   width: 17rem;
   height: 25rem;
@@ -232,5 +239,9 @@
 
   .desktop-only {
     display: initial;
+  }
+
+  .mb-only {
+    display: none;
   }
 }
