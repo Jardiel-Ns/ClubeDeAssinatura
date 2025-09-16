@@ -188,12 +188,20 @@
 }
 
 .card2 {
-  background-color: var(--shape-hover);
   border: none;
 }
 
 .borda {
   border: solid greenyellow;
+}
+
+.star {
+  width: 1.5rem;
+  position: absolute;
+}
+
+.desktop-only {
+  display: none;
 }
 
 @media (min-width: 80em) {
@@ -216,5 +224,13 @@
 
   .margin-inline {
     margin-inline: 10rem;
+  }
+
+  .title-sm {
+    font-size: 2rem;
+  }
+
+  .desktop-only {
+    display: initial;
   }
 }

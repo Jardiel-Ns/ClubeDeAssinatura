@@ -46,11 +46,14 @@ section#description {
 
 @media (min-width: 80em) {
   section#description {
-    width: 60rem;
+    width: 100%;
     margin-top: 15rem;
+    display: flex;
+    justify-content: center;
 
     footer {
       margin-top: 0;
+      width: 60rem;
 
       div.hero-footer-container {
         position: relative;

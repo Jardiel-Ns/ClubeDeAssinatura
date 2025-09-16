@@ -23,6 +23,7 @@ section#pricing {
     padding-left: 3.25rem;
 
     .pricing-card {
+      min-width: 17rem;
       header {
         p {
           color: var(--blue-light);
@@ -66,6 +67,117 @@ section#pricing {
             }
           }
         }
+      }
+    }
+
+    > :nth-child(2) {
+      header {
+        > :nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+
+          p {
+            color: var(--pink-light);
+          }
+
+          span {
+            border-inline: solid 1.2rem var(--shape-stroke);
+            border-block: solid .5rem var(--shape-stroke);
+            border-radius: 2rem;
+            background-color: var(--shape-stroke);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 58em) {
+  section#pricing {
+    margin-top: 10rem;
+    gap: 3.5rem;
+    overflow: initial;
+
+    .pricing-cards {
+      justify-content: center;
+      align-self: auto;
+      overflow-x: hidden;
+      padding-left: 0;
+      position: relative;
+      scroll-snap-type: initial;
+      overflow: initial;
+
+      .pricing-card {
+        background-color: var(--shape-base);
+        transition: all .5s ease;
+      }
+
+      .pricing-card:hover {
+        background-color: var(--shape-hover2);
+        box-shadow: 0 0 10px #58cdffdc, 0 0 30px #73b6d285, 0 0 30px rgba(115, 182, 210, 0.493);
+      }
+
+      > :nth-child(1) {
+        transform: rotate(-8deg) translate(10px, 45px);
+        z-index: 1;
+        position: relative;
+
+        > :nth-child(1) {
+          top: -8%;
+          left: -8%;
+        }
+
+        > :nth-child(2) {
+          width: 1rem;
+          top: 0;
+          left: -12%;
+        }
+      }
+
+      > :nth-child(2) {
+        background-color: var(--shape-hover);
+        z-index: 2;
+        position: relative;
+
+        > :nth-child(1) {
+          width: 2rem;
+          left: 10%;
+          top: -7%;
+        }
+      }
+
+      > :nth-child(3) {
+        transform: rotate(8deg) translate(-10px, 45px);
+        z-index: 1;
+        position: relative;
+
+        > :nth-child(1) {
+          bottom: 0;
+          right: -14%;
+        }
+
+        > :nth-child(2) {
+          width: 1rem;
+          bottom: -6%;
+          right: -2%;
+        }
+      }
+
+      > :nth-child(1):hover {
+        transform: rotate(-8deg) translate(10px, 35px);
+        z-index: 3;
+      }
+
+      > :nth-child(2):hover {
+        transform: translateY(-10px);
+        z-index: 3;
+      }
+
+      > :nth-child(3):hover {
+        transform: rotate(8deg) translate(-10px, 35px);
+        z-index: 3;
       }
     }
   }
