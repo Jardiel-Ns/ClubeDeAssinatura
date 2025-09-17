@@ -43,7 +43,6 @@ html {
 body {
   background-color: var(--shape-background);
   overflow-y: hidden;
-  height: 240rem;
 }
 
 li {
@@ -52,6 +51,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Barra de rolagem horizontal/vertical */
@@ -155,6 +155,7 @@ a {
   line-height: auto;
   font-weight: medium;
   letter-spacing: 0%;
+  white-space: nowrap;
 }
 
 .tag-text {
@@ -196,42 +197,10 @@ a {
 .link {
   text-decoration: none;
   color: var(--blue-light);
+  transition: all 0.4s ease;
 }
 .link:hover {
   color: var(--text-body);
-}
-
-.social-link {
-  filter: invert(65%) sepia(50%) saturate(1801%) hue-rotate(180deg) brightness(97%) contrast(92%);
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.5rem;
-  border-radius: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: filter 400ms ease;
-}
-.social-link:hover {
-  filter: none;
-}
-.social-link:hover::before {
-  scale: 1;
-}
-.social-link::before {
-  content: "";
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  padding: inherit;
-  background-color: var(--shape-stroke);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  scale: 0;
-  transition: scale 400ms ease;
 }
 
 .shadowpoint-purple {
@@ -301,6 +270,35 @@ a {
   }
   .mb-only {
     display: none;
+  }
+  .social-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+  .social-link:hover::before {
+    filter: none;
+    transform: scale(1);
+    opacity: 1;
+  }
+  .social-link::before {
+    content: "";
+    position: absolute;
+    inset: -0.4rem;
+    border-radius: inherit;
+    background-color: var(--shape-stroke);
+    display: block;
+    transform: scale(0);
+    transform-origin: center center;
+    transition: all 200ms ease;
+    opacity: 0;
+    z-index: -1;
+  }
+  .social-link:hover img {
+    filter: brightness(0) saturate(100%) invert(1);
   }
 }
 section#hero-initial {
@@ -977,6 +975,85 @@ section#pricing .pricing-cards > :nth-child(2) header > :nth-child(1) span {
     top: 50%;
     transform: translateY(-50%);
     opacity: 0.6;
+  }
+}
+section#footer {
+  margin-top: 6.5rem;
+  height: 26rem;
+  background: url(../Assets/images/book-trace-background.png) no-repeat center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-inline: 2rem;
+  padding-bottom: 2.5rem;
+}
+section#footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: fit-content;
+}
+section#footer > div > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+section#footer > div > header > header {
+  height: fit-content;
+}
+section#footer > div > header > header img {
+  height: 2.5rem;
+}
+section#footer > div > header > span {
+  background-color: var(--shape-stroke);
+  height: 1px;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+section#footer > div > header > footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+section#footer > div > header > footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+section#footer > div > footer {
+  display: flex;
+  gap: 1.5rem;
+}
+section#footer > div > footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 50%;
+}
+section#footer > div > footer > div > p {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 80em) {
+  section#footer {
+    margin-top: 18rem;
+    padding-inline: 10rem;
+    padding-bottom: 7rem;
+  }
+  section#footer > div {
+    max-width: 60em;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  section#footer > div > header > header {
+    height: fit-content;
+  }
+  section#footer > div > header > header img {
+    height: 4rem;
   }
 }
 

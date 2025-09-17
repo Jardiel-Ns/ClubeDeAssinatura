@@ -46,7 +46,6 @@ html {
 body {
   background-color: var(--shape-background);
   overflow-y: hidden;
-  height: 240rem;
 }
 
 li {
@@ -55,6 +54,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Barra de rolagem horizontal/vertical */
